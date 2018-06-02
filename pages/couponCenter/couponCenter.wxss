@@ -1,0 +1,96 @@
+/* pages/couponCenter/couponCenter.wxss */
+.top{
+  width: 100%;
+}
+.top image{
+  width: 100%;
+}
+.couponList{
+  margin-top: 50rpx;
+  box-sizing: border-box;
+  padding: 10rpx 50rpx;
+}
+.couponList .couponList-item{
+
+  display: flex;
+  width:640rpx;
+  height:200rpx;
+  background:rgba(255,255,255,1);
+  border-radius:4rpx;
+  box-shadow:2rpx 0 4rpx rgba(0,0,0,0.2);
+  margin-bottom: 30rpx;
+}
+.couponList .couponList-item .item-btn{
+  width: 200rpx;
+  align-items:center;
+  justify-content:center;
+  display:flex;
+  flex-direction:column;
+  background-color: #1985CD;
+  color: #fff;
+  font-size: 24rpx;
+}
+.couponList .couponList-item .item-btn.item-yet{
+  background: #D2D2D2;
+  color: #515151 ;
+}
+.couponList .couponList-item .item-btn .item-rod{
+  width: 23rpx;
+  height: 23rpx;
+  margin-left: 5rpx;
+}
+
+.couponList .couponList-item .item-info{
+  flex: 1;
+  display: flex;
+  flex-direction:column;
+  justify-content:center;
+  position: relative;
+}
+.couponList .couponList-item .item-info .item-info-pad{
+  padding-left: 60rpx;
+  z-index: 2;
+}
+.couponList .couponList-item .item-info .item-bg{
+  position:absolute;
+  width:100%;
+  height: 100%;
+  z-index: 1;
+  top:0;
+  left: 0;
+}
+.couponList .couponList-item .item-info .item-bg image{
+  width: 100%;
+  height: 100%;
+}
+.couponList .couponList-item .item-info .item-info-line{
+  width: 100%;
+} 
+.couponList .couponList-item .item-info .item-info-line.line1{
+  color: #F6A336;
+  font-size: 36rpx;
+  font-family:Impact;
+}
+.couponList .couponList-item .item-info .item-info-line.line1 .money{
+  font-size: 60rpx;
+  margin-right: 10rpx;
+}
+.couponList .couponList-item .item-info .item-info-line.line2{
+  display: flex ;
+  font-size: 24rpx;
+}
+.couponList .couponList-item .item-info .item-info-line.line2 .type-bg{
+  height: 40rpx;
+  background: linear-gradient(#54B8F6,#399EE1);
+  border-radius:4px;
+  color: #fff;
+  padding: 5rpx 10rpx;
+  font-size: 26rpx;
+  margin-right: 10rpx;
+}
+
+.couponList .couponList-item .item-info .item-info-line.line2 .text2{
+  font-size: 24rpx;
+  color: #656565;
+  line-height: 60rpx;
+}

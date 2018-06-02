@@ -1,0 +1,46 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/userInfoEdit/userInfoEdit",
+    "pages/couponCenter/couponCenter",
+    "pages/home/home",
+    "pages/servicelist/servicelist",
+    "pages/use/use",
+    "pages/mydiscount/mydiscount",
+    "pages/servicedetail/servicedetail",
+    "pages/orderdetail/orderdetail",
+    "pages/order/order",
+    "pages/activitydetail/activitydetail",
+    "pages/activity/activity",
+    "pages/my/my",
+    "pages/info/info",
+    "pages/logs/logs",
+    "pages/demo/demo"
+  ],
+  "window": {
+    "backgroundTextStyle": "#fff",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "mid小程序测试",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#2C2B2B",
+    "selectedColor": "#7295e4",
+    "backgroundColor": "#fff",
+    "borderStyle": "#979797",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "images/home-icon.png",
+        "selectedIconPath": "images/home-hover-icon.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "images/my-icon.png",
+        "selectedIconPath": "images/my-hover-icon.png"
+      }
+    ]
+  }
+}

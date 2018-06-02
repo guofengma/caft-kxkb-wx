@@ -1,0 +1,17 @@
+<view class="container">
+  <view class='use-bg'></view>
+  <view class='info'>
+    <view class='item'>
+      <view class='title'>抵扣券使用说明</view>
+      <view class='con'>1.一次只能使用一张优惠券，不能与其他优惠活动同时使用；</view>
+      <view class='con'>2.优惠券不找零，不兑现；</view>
+      <view class='con'>3.优惠券过期或者不符合使用范围优惠券无法使用。</view>
+    </view>
+    <view class='item'>
+      <view class='title'>免费券使用说明</view>
+      <view class='con'>1.一次只能使用一张优惠券，不能与其他优惠活动同时使用；</view>
+      <view class='con'>2.优惠券不找零，不兑现；</view>
+      <view class='con'>3.优惠券过期或者不符合使用范围优惠券无法使用。</view>
+    </view>
+  </view>
+</view>

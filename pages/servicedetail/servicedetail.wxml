@@ -1,0 +1,69 @@
+<wxs src="./../../utils/util.wxs" module="_" />
+<view class="container">
+  <view class='detail-wrapper'>
+    <view class='bg-img'>
+      <image lazy-load='{{true}}' mode='widthFix' src='{{baseData.picture!=null?_.imageUrl(urlLocation+baseData.picture):""}}'></image>
+    </view>
+    <view class='detail-list'>
+      <view class='title'>
+        {{baseData.serviceName}}
+      </view>
+      <view class='title2'>
+        {{baseData.decript}}
+      </view>
+      <view class='price'>
+        {{baseData.price}}
+      </view>
+      <view class='discount'>
+        <view class='dis-img'></view>
+        <view class='txt'>
+          <view wx:if="{{couponList.length==0}}">暂无可用优惠券</view>
+          <block wx:else>
+            <view bindtap='handleClickCoupon'>
+              <view wx:if="{{selectedCoupon==null}}">请选择优惠券</view>
+              <view wx:else>
+                {{selectedCoupon.name}}
+              </view>
+            </view>
+          </block>
+        </view>
+        <view class='icon'></view>
+      </view>
+    </view>
+    
+    <view class='detail-list'>
+        <view class='order-title'>规格参数</view>
+        <view class='table-info'>
+          
+          <view class='tr' wx:for='{{baseData.regular}}' wx:key='basereg'>
+            <view class='td name'>{{item.regular}}</view>
+            <view class='td'>{{item.fvalue}}</view>
+          </view>
+        </view>
+        <view class='detail-info'>
+          
+          <import src="./../../wxParse/wxParse.wxml"/>
+          <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+          <!-- {{baseData.serviceDetails}} -->
+        </view>
+    </view>
+    <view class='buy-list'>
+      <view class='order-title'>购买须知</view>
+      <view class='buy-info'>
+        <view class='item-box' wx:for="{{baseData.attention}}" wx:key="goumaixu">
+          <view class='icon'></view>
+          <view class='item'>
+            <text class='name'>{{item.name}}</text>    
+            <text>{{item.attention}}</text> 
+          </view>   
+        </view>
+      </view>
+    </view>
+  </view>
+  <view style='height:100rpx;'>
+  </view>
+  <view class='detail-btn'>
+    <view class='btn shop-icon' bindtap='handleClickCall'>联系商家</view>
+    <view class='btn dis-icon' bindtap='handleClickBuy'>预约下单</view>
+  </view>
+</view>

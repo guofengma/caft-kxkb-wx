@@ -1,0 +1,38 @@
+/**app.wxss**/
+
+page{
+  background-color: #f3f3f3;
+}
+
+.container {
+  
+} 
+.hide{
+  display: none ;
+}
+/*
+  显示动画效果
+*/
+@keyframes show-am{
+  from{
+    height: 0
+  }
+  to{
+    height: 300rpx;
+  }
+}
+@keyframes list-item-in{
+  0% {
+    /* left: 50%; */
+    transform: translateX(80%);
+    opacity:0.3 ;
+  }
+  100%{
+    /* left: auto; */
+    transform: translateX(0);
+    opacity:1 ;
+  }
+}
+.show-am{
+  animation:show-am 300ms;
+}

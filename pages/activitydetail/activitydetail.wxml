@@ -1,0 +1,38 @@
+<view class="container">
+  <view class='activitydetail'>
+    <view class='bg-img'>
+      <image src='../../images/bg.png'></image>
+    </view>
+    <view class='try-list'>
+      <view class='btn'><view class='try-btn'>全城均有试点，人人皆可参</view></view>
+      <view class='list'>
+        <view class='item'>
+          <image src='../../images/bg.png' class='img'></image>
+          <text>江北。福特店</text>
+        </view>
+        <view class='item'>
+          <image src='../../images/bg.png' class='img'></image>
+          <text>江北。福特店</text>
+        </view>
+        <view class='item'>
+          <image src='../../images/bg.png' class='img'></image>
+          <text>江北。福特店</text>
+        </view>
+        <view class='item'>
+          <image src='../../images/bg.png' class='img'></image>
+          <text>江北。福特店</text>
+        </view>
+        <view class='item'>
+          <image src='../../images/bg.png' class='img'></image>
+          <text>江北。福特店</text>
+        </view>
+      </view>
+    </view>
+    <view class='info'>
+        <view class='title'>活动详细规则</view>
+        <view class='con'>1.一次只能使用一张优惠券，不能与其他优惠活动同时使用；</view>
+        <view class='con'>2.优惠券不找零，不兑现；</view>
+        <view class='con'>3.优惠券过期或者不符合使用范围优惠券无法使用。</view>
+    </view>
+  </view>
+</view>

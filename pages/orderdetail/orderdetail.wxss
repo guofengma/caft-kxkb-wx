@@ -1,0 +1,128 @@
+@import "./../../wxParse/wxParse.wxss" ;
+.bg-img{
+  width: 100%;
+  /* height: 320rpx; */
+}
+.bg-img image{
+  width: 100%;
+  /* height: 100%; */
+}
+.detail-list{
+  margin-bottom: 10rpx;
+  background: #fff;
+}
+.detail-list .rcode{
+  margin-bottom: 20rpx;
+  color: #666;
+}
+.title{
+  padding: 16rpx 120rpx 16rpx 30rpx;
+  white-space: 10rpx;
+  font-size: 26rpx;
+  line-height: 36rpx;
+  color: #343434;
+}
+.price{
+  font-size: 24rpx;
+  color: #D91414;
+  line-height: 35rpx;
+  padding: 0 30rpx 22rpx 30rpx;
+  
+}
+.price::before{
+  content: '¥';
+  font-size: 20rpx;
+}
+.order-list{
+  padding-bottom: 30rpx;
+}
+.order-title{
+  font-size: 30rpx;
+  color: #595959;
+  height: 76rpx;
+  line-height: 76rpx;
+  border-bottom: 2rpx solid #BEBEBE;
+}
+.order-title::before{
+  content: '';
+  background: #E60012;
+  padding: 0rpx 4rpx; 
+  margin-left: 30rpx;
+  margin-right: 20rpx;
+}
+.order-info{
+  margin: 0 66rpx 0 56rpx;
+  border-bottom: 2rpx solid #BEBEBE;
+  display: flex;
+  /* padding: 30rpx 0 26rpx 0; */
+  min-height: 82rpx;
+  align-items: center;
+}
+.order-info .name{
+  flex: 0.8;
+  font-size: 30rpx;
+  color: #595959;
+}
+.order-info .con{
+  flex: 2.2;
+  font-size: 24rpx;
+  color: #848383;
+}
+.shop-info{
+  padding: 16rpx 80rpx 56rpx 54rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items:center;
+}
+.address-icon,.phone-icon{
+  width: 54rpx;
+  height: 54rpx;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  display: inline-block;
+  background-position: center center;
+}
+.address-icon{
+  width: 40rpx;
+  
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAbCAYAAAB836/YAAAEB0lEQVRIS41Va2hcRRSeM7upsX9CFTQtVAzSFxa1aNUKvp9FpFSLLxSE6lIhDZii7Nq989obNyi1EAvqSlGQIvXZFtQqWqSCjxbrg4q1gv0RaCJipf7QmOzO8Zub3O1ms9l4/9y55/HNOd93Zi6JWZ5isbSMqLpOZmi1Z3FOCJMkTvkaH2bO7o3j6OdWqdRsLBaLPZTJPk9EdwnBh5jF4QyJEyGuxqKHSKwWLK6Cb6+v1bbEcZz40mcaoFJqPQu5iyQdIPb91trjrarApsvCpgC+kaV4MDZmzwxApew6Fv4tFlyInds2GxWN9qJSW0hQmT1tiGOzL/iSCpM2ZfZHOLVz+rlmsKGhobOCra+v799mHwp5EkVY9tWLQ/sJYKTNbnCzwBlzW5rAzISW10CQMtbXJrsTfQ5hClrrL7HmNFYZ+7Fgf8pZez9BzYtkpnacBK8CwA9TQRRFejO43OaZ38lKGgr2quc+SXSPYOpHJztgSkCjKLqUZOYINlsSEntJio1AX5XuaIy5zDMdksS3YH2wsU18XwffJ/BdifV39Sq1+ZY97yStzasM8tDuI2ec+l0W1FWy5uZW4oCiT4n5tHP27jNtm9dAApMyZh84+r5kbRScgTtt7F81pkcHnN7dClBZex/X/CslZ7rAbNI2eC1hfQkprfeA7aOosNhQ/u84FkWn9cstAZV6XMiMdUaf11BhjGpWklK6AvLPtsY8nDrR0naIdAd4XdESUOufYP8Q/v7Ur415HRz+A0D7GKre5Ky5vO7UehE4HMaUlqUQYMX44MNbYuGgbQEbLsZUnKxXqPQRL/hFiKKXYtaOTYx3njs4WPgzDSgYs7yDRaikihl9aZJfsQmv7MS4WFEum2NpbD5fXtAxb+wPjM3yZLCVNl9jsd9ao5tGZJ73tBEd5BI7U0VK3olKxxvjoIPDoNyK/DWTgMo+gKRn0HZPK87msqGgE9jsaQz7GwlgLpfrOL974TBlJCZFvzAXwLTqrN2MEdr62+jI4kqlMlG/vopab5AsdqDshY3ntB14MrPajHgSvbG1b4fYOiB4yULBg8KLX50zD/2fKiOtd4G7CyHG9civTgMMH+Hax0VxFAG3I+BAO1D4b8J0fORr1ZW4tuq/gxm/gCgyOcpQLAVfgKSxVqCwdwJsmL3YWiqZSmPMDMAgUHf3ovdw9LpxtK5oBQhVv8Fwj4yOnlwfhGgLGJyDg4Ndf4+N/QI+PwOf905TVZk38X3D/PmdS/L5/OnmDWdUmAaAz56pixfK2yeCHadqO45kL3hb2vy3S/NmBZwCuBpcfYHL49nwjcP/lK+JawYG7FezCdYWMCThFK3FKfogrKH+Wgiyv536cwJOgqo7w9s59/5c8/kfygvWv2tIaQoAAAAASUVORK5CYII=');
+}
+.phone-icon{
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAbCAYAAACN1PRVAAACpUlEQVRIS62WTWgTQRTH39vUxI9DtaBepNU0WrUnRRQ8KOhFRM/iwYOo1G7agGKoFi89CIISaZsEPxChemn1pBU8iQUvXkRv1mwiSBGKF6GWmtLs8z/bxI9mdpM2MxAy2Xnz/+V9zJtlKo9YWgaIqd91qbfQy3crz01+sxIDqB+gG2ouRCXM7bzN902ClBa3Z+QgM70FxQOXRwnQ7nycH5gEMrx6AcwJjWgJz7qcOD80BVSezcKltT6Crst0vmDzIxNAjmUEEQscLgzOIqQjjQLrgamqmXd6OGIC9gMizQFCwkKjuR4+bQL2BiKHfYREmEZxDBoGeaUfTUufxXRTCxN6jfAdbdSjyn6ODUk7hSinwBrRJyj9M8ZgSgjl/xKk41WiQh/g2R6jsO1pOYTcTGhEZxwbxcMoEQPjT+hw3p5D7+RSTRjczsU5aYD1N08dw7KtZFFBIzqH1rzBSXCxUeB/RYHK7EZlZqtEmb46NrcZhdGYhGLfaRyixzTCn1CZu2oBN9+SddNJntXZVZV79J40Wwv0GcabNBumQj9p92Qfz+jEcIO8Q2L24ZNAJDKa/Fdviw5Kq9VEk1hZrREtonU/zk/QRXrK6hryRiwLkND+8k/V3RNo3ul/9+sOsre+dVh2NjF9xL8M+4TuF8QLWJ+CcBuEOpbYiUt0qRDnwcpzX5gy2JGVKO6X95gGNeqgNOKVhi5XgIEwLzxDshHt7BWme2sVh8+6IAJX0IlSNWFKoHNMwsVpGiCLrq4Q6AKYrAu2CBDcEHTEInqGPK1fNpRpfhmwRfktKVkTidA1bLyOn/XuF3bpXL3GVY7gPLbygheaLiyu8vUUrxQoywv5BI+sGFYR70xJy1yYTlmW18QPIDct8FcVxTcciXG8nd35YrM6s/Qb6T/UDzpn36EAAAAASUVORK5CYII=');
+}
+.shop-info .info{
+  font-size: 24rpx;
+  color: #757575;
+  display: inline-block;
+  padding-left: 24rpx;
+  padding-right: 24rpx;
+  flex: 1;
+}
+.shop-info .info text{
+  display: block;
+}
+.shop-info .info .name{
+  color: #474747;
+  font-size: 26rpx;
+  padding-bottom: 8rpx;
+}
+.order-btn{
+  padding: 20rpx 0 58rpx 0;
+  display: flex;
+  justify-content: center;
+}
+.order-btn .btn{
+  padding: 18rpx 42rpx 16rpx 42rpx;
+  border-radius: 6rpx;
+  font-size: 30rpx;
+  color: #FFFFFF;
+  background: #2495FF;
+}
+.order-btn .btn.cancle-btn{
+  color: #6E6E6E;
+  background: #D0D0D0;
+  margin-right: 58rpx;
+}
+.shop-list{
+  background: #fff;
+}

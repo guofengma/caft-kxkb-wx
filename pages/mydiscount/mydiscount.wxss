@@ -1,0 +1,105 @@
+.nav-bar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  display: flex;
+  justify-content: space-between;
+  background: #fff;
+  box-shadow: 0 2rpx 4rpx rgba(0, 0, 0, 0.1)
+}
+.nav-item{
+  flex: 1;
+  text-align: center; 
+  font-size: 24rpx;
+  color: #272727;
+
+}
+.nav-item .active{
+  display: inline-block;
+  padding: 0 2rpx;
+  border-bottom: 2rpx solid #56A5C3;
+}
+.dis-list{
+  margin-top: 126rpx;
+}
+.discount{
+  width: 618rpx;
+  margin: 0 auto;
+  margin-bottom: 30rpx;
+  border-radius: 10rpx;
+  background: #fff;
+}
+.discount-top{
+  min-height: 122rpx;
+}
+.dashed{
+  border-bottom: 2rpx dashed #050001;
+  margin: 0 16rpx;
+  position: relative;
+}
+.dashed::before{
+  content: '';
+  position: absolute;
+  left: -16rpx;
+  top: -16rpx;
+  background: #F5F5F5;
+  width: 16rpx;
+  height: 32rpx;
+  border-radius: 0 16rpx 16rpx 0;
+}
+.dashed::after{
+  content: '';
+  position: absolute;
+  right: -22rpx;
+  top: -22rpx;
+  background: #F5F5F5;
+  width: 22rpx;
+  height: 44rpx;
+  border-radius: 22rpx 0 0 22rpx;
+}
+.discount-down{
+  font-size: 30rpx;
+  color: #56A5C3;
+  line-height: 32rpx;
+  padding: 32rpx 0;
+  text-align: center;
+}
+.discount-price{
+  display: inline-block;
+  margin: 30rpx 46rpx 28rpx 78rpx;
+}
+.discount-price .dis{
+  border:2rpx solid #CB0A0A;
+  font-size: 24rpx;
+  color: #CB0A0A;
+  padding: 2rpx 4rpx;
+  border-radius: 2rpx;
+}
+.discount-price .price{
+  font-size: 36rpx;
+  color: #FA4346;
+  font-weight:700;
+}
+.discount-price .price::before{
+  content: '¥';
+  font-size: 32rpx;
+  color: #FA4346;
+}
+.discount-user{
+  display: inline-block;
+  margin: 30rpx 0 18rpx 0;
+  vertical-align: top;
+}
+.discount-user .name{
+  font-size: 30rpx;
+  color: #313131;
+  margin-bottom: 20rpx;
+}
+.discount-user .date{
+  font-size: 24rpx;
+  color: #6E6E6E;
+}

@@ -1,0 +1,78 @@
+<!--index.wxml-->
+<view class="container">
+  <view class='top'>
+    <view class='bg-image'>
+      <image src='../../images/bg.png' class='bg'></image>
+      <view class='fiter'></view>
+      <view class='search-box-wrapper'>
+        <view class='car-icon'></view>
+        <view class='search-box'>
+          <image src='../../images/search-icon.png' class='search-icon'></image>
+          <input placeholder="请输入你想要的服务" type="text" class="box"/>
+        </view>
+        <view class='city-wrapper'>
+          <view class='drop-down'>
+            <text class='txt'>重庆重庆重庆重庆市</text>
+            <image src='../../images/arrow-down-icon.png' class='arrow-icon'></image>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='info-wrapper'>
+    <view class='info'>
+      <view class='title'>
+        <text>长安福特福全汽修店</text>
+        <view class='star'>
+
+        </view>
+      </view>
+      <view class='info-txt'>
+        主营业务：快洗、精洗、打蜡、抛光、保养、四轮 定位、快修等......
+      </view>
+      <view class='address'>
+        <text>重庆市渝北区新牌坊中渝广场6F-13</text>
+      </view>
+    </view>
+    <view class='info-icon'>
+      <view class='icon'>
+        <view class='nav-icon'></view>
+        <text>导航</text>
+      </view>
+      <view class='icon'>
+        <view class='phone-icon'></view>
+        <text>电话</text>
+      </view>
+    </view>
+  </view>
+  <view class='tab-wrapper'>
+    <view class='tab-item'>
+      <image class='tab-icon keep-icon' src='../../images/keep-icon.png'></image>
+      <text>做保养</text>
+    </view>
+    <view class='tab-item'>
+      <image class='tab-icon carwash-icon' src='../../images/carwash-icon.png'></image>
+      <text>美容洗车</text>
+    </view>
+    <view class='tab-item'>
+      <image class='tab-icon service-icon' src='../../images/service-icon.png'></image>
+      <text>汽车维修</text>
+    </view>
+    <view class='tab-item'>
+      <image class='tab-icon check-icon' src='../../images/check-icon.png'></image>
+      <text>胎压检测</text>
+    </view>
+  </view>
+  <view class='banner'>
+    <image src='../../images/banner1.png' class='img'></image>
+  </view>
+  <view class='carwash-wrapper'>
+    <view class='carwash-title'>美容洗车专区</view>
+    <view class='carwash-img'>
+      <image src='../../images/carwash1.png' class='img'></image>
+    </view>
+    <view class='carwash-content'>
+
+    </view>
+  </view>
+</view>

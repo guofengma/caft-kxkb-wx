@@ -1,0 +1,10 @@
+/*
+ 2018-5-17 10:59:46
+ 通用样式
+*/
+.hide{
+  display: none ;
+}
+.show{
+  display: block ;
+}

@@ -1,0 +1,24 @@
+<!--pages/userInfoEdit/userInfoEdit.wxml-->
+<view class='v'>
+  <form bindsubmit='formSubmit'>
+    <view class='item'>
+      <view class='item-l'>姓名</view>
+      <!-- <view class='item-se'></view> -->
+      <view class='item-r'><input name="userName" maxlength="30"></input></view>
+    </view>
+    <view class='item'>
+      <view class='item-l'>手机号码</view>
+      <!-- <view class='item-se'></view> -->
+      <view class='item-r'><input name="wxTelephone" maxlength="30" type='number'></input></view>
+    </view>
+    <view class='item'>
+      <view class='item-l'>车牌号</view>
+      <!-- <view class='item-se'></view> -->
+      <view class='item-r'><input name="plateNumber" maxlength="7" type='number'></input></view>
+    </view>
+    <view>
+      <button open-type="getUserInfo" bindgetuserinfo="getUserInfoThen">点我一键获取</button>
+      <button form-type='submit'>提交</button>
+    </view>
+  </form>
+</view>

@@ -1,0 +1,16 @@
+{
+	"resCode": 0,
+	"data": [
+    {
+		"imgUrl": "1212",
+		"type": 0, 
+		"itemId": "xxxxx"
+    },
+    {
+		"imgUrl": "图片地址",
+		"type": 1,
+		"redirectUrl": "https: //baidu.com"
+    }
+  ],
+	"errMsg": "is err"
+}

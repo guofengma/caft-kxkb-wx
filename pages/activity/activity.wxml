@@ -1,0 +1,39 @@
+<view class="container">
+  <view class='activity-list'>
+    <view class='list'>
+      <image src='../../images/bg.png' class='img'></image>
+      <view class='info'>
+        <text class='name'>你洗车，我付费，全城均有</text>
+        <text class='time'>活动时间：2018.05.08 — 2018.05.08</text>
+      </view>
+    </view>
+    <view class='list'>
+      <image src='../../images/bg.png' class='img'></image>
+      <view class='info'>
+        <text class='name'>你洗车，我付费，全城均有</text>
+        <text class='time'>活动时间：2018.05.08 — 2018.05.08</text>
+      </view>
+    </view>
+    <view class='list'>
+      <image src='../../images/bg.png' class='img'></image>
+      <view class='info'>
+        <text class='name'>你洗车，我付费，全城均有</text>
+        <text class='time'>活动时间：2018.05.08 — 2018.05.08</text>
+      </view>
+    </view>
+    <view class='list'>
+      <image src='../../images/bg.png' class='img'></image>
+      <view class='info'>
+        <text class='name'>你洗车，我付费，全城均有</text>
+        <text class='time'>活动时间：2018.05.08 — 2018.05.08</text>
+      </view>
+    </view>
+    <view class='list'>
+      <image src='../../images/bg.png' class='img'></image>
+      <view class='info'>
+        <text class='name'>你洗车，我付费，全城均有</text>
+        <text class='time'>活动时间：2018.05.08 — 2018.05.08</text>
+      </view>
+    </view>
+  </view>
+</view>

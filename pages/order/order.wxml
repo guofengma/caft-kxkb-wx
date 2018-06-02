@@ -1,0 +1,58 @@
+<wxs src="./../../utils/util.wxs" module="_" />
+<view class="container">
+  <view class='nav-bar' bindtap='handleClickTap'>
+    <view class='nav-item {{pageType=="0"?"active":""}}' data-type='0'>所有订单</view>
+    <view class='nav-item {{pageType=="1"?"active":""}}' data-type='1'>已完成</view>
+    <!-- <view class='nav-item'>待支付</view> -->
+    <view class='nav-item {{pageType=="3"?"active":""}}' data-type='3'>待到店</view>
+    <view class='nav-item {{pageType=="4"?"active":""}}' data-type='4'>已取消</view>
+  </view>
+  <view class='order-list'>
+    <view class='list'wx:for="{{orderList}}" wx:key='orderlist' bindtap='handleClickList' data-item='{{item}}'>
+      <view class='order-title'>
+        <view class='number'>订单号：{{item.orderNo}}</view>
+        <view class='state wait-state'>{{_.converState(item.type)}}</view>
+      </view>
+      <view class='order-info'>
+        <view class='order-img'>
+          <image src='{{_.imageUrl(urlLocation+item.imageUrl)}}' class='img'></image>
+        </view>
+        <view class='order-item'>
+          <view class='order-con'>
+            <view class='name'>订单商品:</view>
+            <view class='con'>{{item.commodityName}}</view>
+          </view>
+          <view class='order-con'>
+            <view class='name'>订单门店:</view>
+            <view class='con'>
+              <view>{{item.shopName}}</view>
+              <!-- <view>图标</view> -->
+            </view>
+          </view>
+          <!-- <view class='order-con'>
+            <view class='name'>用户信息:</view>
+            <view class='con'>张先生 13323235234</view>
+          </view> -->
+          <view class='order-con'>
+            <view class='name'>下单时间:</view>
+            <view class='con'>{{item.orderTime}}</view>
+          </view>
+          <view wx:if="{{item.type==1}}" class='order-con'>
+            <view class='name'>完成时间:</view>
+            <view class='con'>{{item.completionTime}}</view>
+          </view>
+          <view wx:if="{{item.type==4}}" class='order-con'>
+            <view class='name'>取消时间:</view>
+            <view class='con'>{{item.cancelTime}}</view>
+          </view>
+        </view>
+      </view>
+      <view class='order-price'>
+        <view class='price'>
+          <text>金额:</text><text class='price-txt'>{{item.orderMoney}}</text>
+        </view>
+        <!-- <view class='btn'>用优惠劵</view> -->
+      </view>
+    </view>
+  </view>
+</view>

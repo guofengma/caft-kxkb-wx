@@ -1,0 +1,101 @@
+<!--pages/servicelist/servicelist.wxml-->
+<!-- <text>pages/servicelist/servicelist.wxml</text> -->
+<view>
+  <wxs src="./../../utils/util.wxs" module="_" />
+  <!-- <view class='top'>
+    <image src='./../../images/servicelist-top.png'>
+    </image>
+  </view> -->
+  <view class='filter-row'>
+    <view class='filter-item active' bindtap='handleClickChangeType'>
+      <view>{{thisLink.name}}</view>
+      <view class='iconfont {{filterTypeIcon}}'></view>
+    </view>
+    <view class='filter-item' bindtap='handleClickPriceSort'>
+      <view>价格</view>
+      <view class='iconfont {{filterPriceIcon}}'></view>
+    </view>
+  </view>
+  <cover-view class="mode-demo {{hideMode}}" bindtap='handleModeTop'>
+    <cover-view class='mode-list show-am' bindtap='handleModeListItem'>
+      <cover-view class='mode-list-item {{item.itemId==thisLink.itemId?"active":""}}' 
+        wx:for="{{linkList}}" 
+        wx:key='mode-list-item'
+        data-itemid='{{item.itemId}}'
+      >
+        {{item.name}}
+      </cover-view>
+    </cover-view>
+  </cover-view>  
+  <view class='content-list'>
+    <!-- <view class='item'>
+      <view class='item-img'>
+         <image src='./../../images/嘉实多.png'></image> 
+      </view>
+      <view class='item-content'>
+        <view>
+          <view class='item-content-name'>
+            嘉实多磁护保养套餐
+          </view>
+          <view>
+            <view>磁护机油4升</view>
+          </view>
+        </view>
+        <view>
+          <view>
+            价格
+            <text class='price'>￥50.0</text>
+          </view>
+        </view>
+      </view>
+      <view class='item-buy'>
+        <view class='buyBut'>
+          <view>立即</view>
+          <view>购买</view>
+        </view>
+      </view>
+    </view> -->
+    
+    <view class='item' 
+      style='animation-delay:{{index%pageSize*100}}ms'
+      wx:for="{{serviceList}}" 
+      wx:key="slist" 
+      bindtap='handleClickItem' 
+      data-item='{{item}}'>
+      <view class='item-img'>
+         <image src='{{_.imageUrl(urlLocation+item.picture)}}'></image> 
+      </view>
+      <view class='item-content'>
+        <view>
+          <view class='item-content-name'>
+            {{item.FserviceName}}
+          </view>
+          <view>
+            <view wx:for="{{item.Fattributes}}" wx:key="attr" wx:for-item="itemAttr">
+              {{itemAttr}}
+            </view>
+            <!-- <view>机油滤清器</view>
+            <view>车辆安全检查</view> -->
+          </view>
+        </view>
+        <view>
+          <view>
+            价格
+            <text class='price'>￥{{item.price}}</text>
+          </view>
+        </view>
+      </view>
+      <view class='item-buy'>
+        <view class='buyBut'>
+          <view>立即</view>
+          <view>购买</view>
+        </view>
+      </view>
+    </view>
+    <view class='noData' wx:if="{{!hasNext}}">
+      <lable>-暂无更多数据-</lable>
+    </view>
+    <view style='height:120rpx'>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,5 @@
+<!--pages/demo/demo.wxml-->
+<text>pages/demo/demo.wxml</text>
+<web-view src='https://yekj.natappvip.cc/FordPlanAndProduce/index.html'>
+
+</web-view>

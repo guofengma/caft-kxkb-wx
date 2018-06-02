@@ -1,0 +1,30 @@
+var _ = {
+  converState : function (state) {
+    var ret = '', _state = parseInt(state);
+
+    switch (_state) {
+
+      case 1:
+        ret = '已完成';
+        break;
+      case 2:
+        ret = '待支付';
+        break;
+      case 3:
+        ret = '待到店';
+        break;
+      case 4:
+        ret = '已取消';
+        break;
+      default:
+        ret = '未知';
+    }
+
+    return ret;
+  }
+} 
+  
+
+module.exports = {
+  converState: _.converState 
+}

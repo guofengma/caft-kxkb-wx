@@ -1,0 +1,144 @@
+<view class="container">
+  <view class='header'>
+    <image src='./../../images/my-header.jpg'></image>
+  </view>
+  <view class='user-info'>
+    <!-- <image class='m-header' src='{{userInfo.avatarUrl}}'></image>
+    <text class='name'>{{userInfo.nickName}}</text> -->
+    <open-data type="userAvatarUrl" class='m-header'></open-data>
+    <open-data type='userNickName' lang="zh_CN" class='name'></open-data>
+    <text class='detail'>今天，又是充满活力的一天</text>
+    <view class='setting' bindtap='handleClickSet'></view>
+  </view>
+  <view class='my-content my-order'>
+    <view class='title'>
+      <view class='name'>我的订单</view>
+      <!-- <view class='all'>全部订单</view> -->
+    </view>
+    <view class='tab-wrapper'>
+      <view class='tab-item' bindtap='hanleOrder' data-type='0'>
+        <!-- <view class='tab-icon all-icon'></view> -->
+        <view class='tab-icon'>
+          <image mode='widthFix' src='./../../images/my/all.png'></image>
+        </view>
+        <text>所有订单</text>
+      </view>
+      <!-- <view class='tab-item' bindtap='hanleOrder' data-type=''>
+        <view class='tab-icon waitpay-icon'></view>
+        <text>待支付</text>
+      </view> -->
+      <view class='tab-item' bindtap='hanleOrder' data-type='1'>
+        <!-- <view class='tab-icon finish-icon'></view> -->
+        <view class='tab-icon'>
+          <image mode='widthFix' src='./../../images/my/comple.png'></image>
+        </view>
+        <text>已完成</text>
+      </view>
+      <view class='tab-item' bindtap='hanleOrder' data-type='3'>
+        <!-- <view class='tab-icon waitshop-icon'></view> -->
+        <view class='tab-icon'>
+          <image mode='widthFix' src='./../../images/my/onShop.png'></image>
+        </view>
+        <text>待到店</text>
+      </view>
+      <view class='tab-item'  bindtap='hanleOrder' data-type='4'>
+        <!-- <view class='tab-icon cancle-icon'></view> -->
+        <view class='tab-icon'>
+          <image mode='widthFix' src='./../../images/my/cacel.png'></image>
+        </view>
+        <text>已取消</text>
+      </view>
+    </view>
+  </view>
+  <view class='my-content my-discount'>
+    <view class='title'>
+      <view class='name'>我的优惠劵</view>
+      <!-- <view class='all'>查看详情</view> -->
+    </view>
+    <view class='discount-list'>
+      <view class='nodiscount' wx:if="{{myCouponList.length==0}}">
+        -暂无可用优惠券-
+      </view>
+      <view class='discount' wx:for="{{myCouponList}}" wx:key="coupon">
+        <view class='discount-top'>
+            <view class='discount-price'>
+              <view class='dis'>立减劵</view>
+              <view class='price'>{{item.price}}</view>
+            </view>
+            <view class='discount-user'>
+              <view class='name'>{{item.name}}</view>
+              <view class='date'>有效期至：{{item.validityTime}}</view>
+            </view>
+        </view>
+        <!-- <view class='dashed'></view>
+        <view class='discount-down'>
+          立即使用
+        </view> -->
+      </view>
+      <!-- <view class='discount'>
+        <view class='discount-top'>
+            <view class='discount-price'>
+              <view class='dis'>立减劵</view>
+              <view class='price'>100</view>
+            </view>
+            <view class='discount-user'>
+              <view class='name'>洗车专用券</view>
+              <view class='date'>有效期至：2018-04-28</view>
+            </view>
+        </view>
+        <view class='dashed'></view>
+        <view class='discount-down'>
+          立即使用
+        </view>  
+      </view> -->
+      <!-- <view class='discount'>
+        <view class='discount-top'>
+            <view class='discount-price'>
+              <view class='dis'>立减劵</view>
+              <view class='price'>100</view>
+            </view>
+            <view class='discount-user'>
+              <view class='name'>洗车专用券</view>
+              <view class='date'>有效期至：2018-04-28</view>
+            </view>
+        </view>
+        <view class='dashed'></view>
+        <view class='discount-down'>
+          立即使用
+        </view>  
+      </view> -->
+    </view>
+    <view class='couponCenter' bindtap='handleClickCouponCenter'>
+      领券中心
+    </view>
+
+  </view>
+
+  <!-- 用户信息修改 -->
+  <view class='filter' hidden='{{!openSet}}'>
+    <view class='dialog'>
+      <view class='d-title'>个人信息修改</view>
+      <view class='content'>
+          <!-- <view class='list'>
+            <view class='name'>姓名</view>
+            <view class='info header-img'>
+              <image src='../../images/carwash-icon.png' class='img'></image>
+            </view>
+          </view> -->
+          <view class='list'>
+            <view class='name'>姓名</view>
+            <view class='info'>
+              <input class='info-input' type='text' placeholder='请输入您的姓名' />
+            </view>
+          </view>
+          <view class='list'>
+            <view class='name'>信息</view>
+            <view class='info'>
+              <input class='info-input' type='text' placeholder='' />
+            </view>
+          </view>
+          <view class='btn' bindtap='handleClickUpUser'>立即修改</view>
+      </view>
+    </view>
+  </view>
+</view>

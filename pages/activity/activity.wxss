@@ -1,0 +1,26 @@
+.activity-list{
+  margin: 78rpx 54rpx 78rpx 56rpx 
+}
+.list{
+  margin-bottom: 48rpx;
+  box-shadow: 0 2rpx 4rpx rgba(0,0,0,0.1);
+}
+.img{
+  width: 640rpx;
+  height: 242rpx;
+}
+.info{
+  background: #fff;
+  padding: 42rpx 36rpx;
+}
+.info .name{
+  font-size: 26rpx;
+  color: #505050;
+  display: block;
+  margin-bottom: 8rpx;
+}
+.info .time{
+  font-size: 24rpx; 
+  color: #747373;
+  display: block;
+}

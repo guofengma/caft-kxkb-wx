@@ -1,0 +1,89 @@
+<view class="container">
+  <view class='nav-bar'>
+    <view class='nav-item'><view class='active'>可使用</view></view>
+    <view class='nav-item'><view>已使用</view></view>
+    <view class='nav-item'><view>已过期</view></view>
+  </view>
+  <view class='dis-list'>
+    <view class='discount'>
+      <view class='discount-top'>
+          <view class='discount-price'>
+            <view class='dis'>立减劵</view>
+            <view class='price'>100</view>
+          </view>
+          <view class='discount-user'>
+            <view class='name'>洗车专用券</view>
+            <view class='date'>有效期至：2018-04-28</view>
+          </view>
+      </view>
+      <view class='dashed'></view>
+        <view class='discount-down'>
+        立即使用
+      </view> 
+    </view>
+    <view class='discount'>
+      <view class='discount-top'>
+          <view class='discount-price'>
+            <view class='dis'>立减劵</view>
+            <view class='price'>100</view>
+          </view>
+          <view class='discount-user'>
+            <view class='name'>洗车专用券</view>
+            <view class='date'>有效期至：2018-04-28</view>
+          </view>
+      </view>
+      <view class='dashed'></view>
+        <view class='discount-down'>
+        立即使用
+      </view> 
+    </view>
+    <view class='discount'>
+      <view class='discount-top'>
+          <view class='discount-price'>
+            <view class='dis'>立减劵</view>
+            <view class='price'>100</view>
+          </view>
+          <view class='discount-user'>
+            <view class='name'>洗车专用券</view>
+            <view class='date'>有效期至：2018-04-28</view>
+          </view>
+      </view>
+      <view class='dashed'></view>
+        <view class='discount-down'>
+        立即使用
+      </view> 
+    </view>
+    <view class='discount'>
+      <view class='discount-top'>
+          <view class='discount-price'>
+            <view class='dis'>立减劵</view>
+            <view class='price'>100</view>
+          </view>
+          <view class='discount-user'>
+            <view class='name'>洗车专用券</view>
+            <view class='date'>有效期至：2018-04-28</view>
+          </view>
+      </view>
+      <view class='dashed'></view>
+        <view class='discount-down'>
+        立即使用
+      </view> 
+    </view>
+    <view class='discount'>
+      <view class='discount-top'>
+          <view class='discount-price'>
+            <view class='dis'>立减劵</view>
+            <view class='price'>100</view>
+          </view>
+          <view class='discount-user'>
+            <view class='name'>洗车专用券</view>
+            <view class='date'>有效期至：2018-04-28</view>
+          </view>
+      </view>
+      <view class='dashed'></view>
+        <view class='discount-down'>
+        立即使用
+      </view> 
+    </view>
+  </view>
+</view>

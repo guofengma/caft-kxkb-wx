@@ -1,0 +1,65 @@
+<wxs src="./../../utils/util.wxs" module="_" />
+<view class="container">
+  <view class='bg-img'>
+    <image mode='widthFix' wx:if="{{orderInfo.imageUrls!=null}}" src='{{_.imageUrl(urlLocation+orderInfo.imageUrls)}}'></image>
+  </view>
+  <view class='detail-list'>
+    <view class='title'>
+      {{orderInfo.commodityName}}
+    </view>
+    <view class='price'>
+      {{orderInfo.orderMoney}}
+    </view>
+  </view>
+  <view class='detail-list'>
+      <view class='order-title'>订单信息</view>
+      <view class='order-list'>
+        <view class='order-info'>
+          <view class='name'>订单号</view>
+          <view class='con'>{{orderInfo.orderNo}}</view>
+        </view> 
+        <view class='order-info'>
+          <view class='name'>下单时间</view>
+          <view class='con'>{{orderInfo.orderTime}}</view>
+        </view> 
+        <view class='order-info'>
+          <view class='name'>订单状态</view>
+          <view class='con'>{{_.converState(orderInfo.type)}}</view>
+        </view>
+        <view wx:if="{{orderInfo.type==1}}" class='order-info'>
+          <view class='name'>完成时间</view>
+          <view class='con'>{{orderInfo.orderCompleTime}}</view>
+        </view>
+        <view wx:if="{{orderInfo.type==4}}" class='order-info'>
+          <view class='name'>取消时间</view>
+          <view class='con'>{{orderInfo.cancelTime}}</view>
+        </view>
+        <view class='order-info'>
+          <view class='name'>优惠券</view>
+          <view class='con'>{{orderInfo.couponName==null?'未使用优惠券':orderInfo.couponName}}</view>
+        </view> 
+      </view>
+      <view class='rcode' wx:if="{{orderInfo.type==3}}" style="font-size:26rpx;text-align:center">
+        <view>
+          <image mode='widthFix' src='{{codeLocation+"all/getCode?value="+orderInfo.orderNo}}'></image>
+        </view>
+        <label>请将此二维码展示给门店核销人员扫描</label>
+      </view>
+  </view>
+  
+  <view class='shop-list'>
+    <view class='order-title'>服务商信息</view>
+    <view class='shop-info'>
+      <view class='address-icon'></view>
+      <view class='info'>
+        <text class='name'>{{shopInfo.name}}</text>
+        <text>{{shopInfo.address}}</text>
+      </view>
+      <view class='phone-icon' bindtap='handleClickCall'></view>
+    </view>
+    <view class='order-btn'>
+      <view wx:if="{{orderInfo.type==3}}" class='btn cancle-btn' bindtap='handleClickCenal'>取消订单</view>
+      <!-- <view class='btn'>确认使用</view> -->
+    </view>
+  </view>
+</view>

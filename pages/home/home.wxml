@@ -1,0 +1,143 @@
+<!--index.wxml-->
+<view class="container">
+  <wxs src="./../../utils/util.wxs" module="_" />
+  <view class='top'>
+    <view class='bg-image'>
+      <image  mode='widthFix'  
+              wx:if="{{shopInfo.pictureUrl}}" 
+              src='{{_.imageUrl(urlLocation+shopInfo.pictureUrl)}}' 
+              class='bg'>
+      </image>
+      <!-- <view class='fiter'></view> -->
+      <!-- <view class='search-box-wrapper'>
+         <view class='car-icon'></view>
+        <view class='search-box'>
+          <image src='../../images/search-icon.png' class='search-icon'></image>
+          <input placeholder="请输入你想要的服务" type="text" class="box"/>
+        </view>
+        <view class='city-wrapper'>
+          <view class='drop-down'>
+            <text class='txt'>重庆市</text>
+            <image src='../../images/arrow-down-icon.png' class='arrow-icon'></image>
+          </view>
+        </view> 
+      </view> -->
+    </view>
+  </view>
+  <view class='info-wrapper'>
+    <view class='info'>
+      <view class='title'>
+        <text>{{shopInfo.name}}</text>
+        <view class='star'>
+
+        </view>
+      </view>
+      <view class='info-txt'>
+        {{shopInfo.info}}
+      </view>
+      <view class='address'>
+        <i class='iconfont icon-dingwei address'></i><text>{{shopInfo.address}}</text>
+      </view>
+    </view>
+    <view class='info-icon'>
+      <view class='icon' bindtap='handleOpenLocation'>
+        <view class='nav-icon'>
+          <image src='./../../images/home-nav.png'></image>
+        </view>
+        <text>导航</text>
+      </view>
+      <view class='icon' bindtap="handleCallShop">
+        <view class='phone-icon'>
+          <image src='./../../images/home-phone.png'></image>
+        </view>
+        <text>电话</text>
+      </view>
+    </view>
+  </view>
+  <view class='tab-wrapper' >
+    <view class='tab-item' wx:for='{{linkList}}' wx:key='unique'>
+      <view bindtap='handleLink' data-item='{{item}}'>
+        <image id='unique-img-{{index}}' 
+               lazy-load 
+               class='tab-icon keep-icon' 
+               src='{{_.imageUrl(urlLocation+item.iconUrl)}}' >
+        </image>
+        <text>{{item.name}}</text>
+      </view>
+    </view>
+    <!-- <view class='tab-item'>
+      <image class='tab-icon keep-icon' src='../../images/keep-icon.png'></image>
+      <text>做保养</text>
+    </view>
+    <view class='tab-item'>
+      <image class='tab-icon carwash-icon' src='../../images/carwash-icon.png'></image>
+      <text>美容洗车</text>
+    </view>
+    <view class='tab-item'>
+      <image class='tab-icon service-icon' src='../../images/service-icon.png'></image>
+      <text>汽车维修</text>
+    </view>
+    <view class='tab-item'>
+      <image class='tab-icon check-icon' src='../../images/check-icon.png'></image>
+      <text>胎压检测</text>
+    </view> -->
+
+  </view>
+  <swiper class='banner' circular="true">
+    <swiper-item wx:for="{{bannerList}}" 
+      bindtap='handleClickBanner' 
+      data-banner='{{item}}'
+      wx:key='bannerList'
+    >
+      <image lazy-load='{{true}}' src='{{_.imageUrl(urlLocation+item.imgUrl)}}' class='img'></image>
+      <!-- <image src='../../images/banner2.png' class='img'></image> -->
+    </swiper-item>
+    <!-- <swiper-item>
+      <image src='../../images/banner1.png' class='img'></image>
+    </swiper-item>
+    <swiper-item>
+      <image src='../../images/banner2.png' class='img'></image>
+    </swiper-item>
+    <swiper-item>
+      <image src='../../images/banner1.png' class='img'></image>
+    </swiper-item>
+    <swiper-item>
+      <image src='../../images/banner2.png' class='img'></image>
+    </swiper-item> -->
+  </swiper>
+  <view class='carwash-wrapper'>
+    <view class='carwash-title'>美容洗车专区</view>
+    <view class='carwash-img'>
+      <image mode='widthFix' src='../../images/carwash1.png' class='img'></image>
+    </view>
+    <view class='carwash-content'>
+      <view class='carwash-list fine-washing' 
+        wx:for="{{hotServer}}" 
+        wx:key="hotServer"
+        bindtap='handleClickHotServer'  
+        data-itemId='{{item.itemId}}'
+      >
+        <view class='title'>{{item.name}}</view>
+        <view class='detail'>
+          {{_.arrMap(item.attributes,2)}}
+        </view>
+        <view class='list-img'>
+          <image lazy-load='{{false}}' src='{{_.imageUrl(urlLocation+item.picture)}}'></image>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view style='height:50rpx;text-align:center;font-size:10rpx;color:#999'>
+    --我是有底线的人--
+  </view>
+  <view class='redpack' hidden='{{!showRP}}'>
+    <view class='redpack-vi'>
+      <view class='redpack-vi-c'>
+        <view class='redpack-rm'>
+          <image mode='widthFix' src='./../../images/rp-rm.png' bindtap='handleClickRPClose' />
+        </view>
+        <image mode='widthFix' src='./../../images/rp-bk.png' bindtap='handleClickRPGet' />
+      </view>
+    </view>
+  </view>
+</view>
