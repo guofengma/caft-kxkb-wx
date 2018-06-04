@@ -133,14 +133,14 @@ Page({
    * 点击下单页面
    */
   handleClickBuy: function(e){
+    let { wxTelephone } = app.globalData.userInfo ;
     //检测用户是否已经填写信息,没有填写则跳转到留资页面
-    if (app.globalData.userInfo.wxTelephone==null){
+    if (wxTelephone == null || wxTelephone==""){
 
-      wx.showModal({
-        title: '抱歉',
-        content: '请留资料',
+      //留资界面
+      wx.navigateTo({
+        url: '/pages/userInfoEdit/userInfoEdit',
       })
-
       return ;
     }
 

@@ -20,7 +20,7 @@
   "window": {
     "backgroundTextStyle": "#fff",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "mid小程序测试",
+    "navigationBarTitleText": "Quick Lane",
     "navigationBarTextStyle": "black"
   },
   "tabBar": {

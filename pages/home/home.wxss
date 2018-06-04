@@ -152,7 +152,7 @@
 .tab-item{
   text-align:center;
   width: 25%;
-  border-right:1rpx solid #F2F2F2;
+  /* border-right:1rpx solid #F2F2F2; */
 }
 .tab-item text{
   color: #373737;
@@ -222,8 +222,10 @@
   padding: 18rpx 0 36rpx 0;
 }
 .fine-washing .list-img{
-  width: 220rpx;
-  height: 146rpx;
+  /* width: 220rpx;
+  height: 146rpx; */
+  width: 180rpx;
+  height: 160rpx;
 }
 .coating-film{
   padding: 34rpx 6rpx 84rpx 30rpx;
@@ -283,4 +285,12 @@
 }
 .redpack .redpack-vi .redpack-vi-c .redpack-rm image{
   width: 50rpx;
+}
+
+.city-w{
+  position: absolute;
+  top:10rpx;
+  right: 20rpx;
+  font-size:26rpx;
+  color:#ccc;
 }

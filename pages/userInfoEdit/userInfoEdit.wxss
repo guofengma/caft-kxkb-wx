@@ -24,6 +24,8 @@ page{
   margin: 0 60rpx 0 30rpx;
 }
 .v .item .item-r{
+  display: flex;
+  align-items:flex-end;
   flex: 1
 }
 .v .item .item-r input{
@@ -31,4 +33,17 @@ page{
   min-height: 1rem;
   height: 28rpx;
   font-size: 28rpx;
+  flex: 1;
+}
+.placeholder{
+  font-size: 20rpx;
+}
+.getPN{
+  height: 50rpx;
+  width: 100rpx;
+  font-size: 16rpx;
+  line-height: 50rpx;
+  margin: 0;
+  padding: 0;
+  margin-left: 20rpx;
 }

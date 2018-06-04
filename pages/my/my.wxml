@@ -8,7 +8,9 @@
     <open-data type="userAvatarUrl" class='m-header'></open-data>
     <open-data type='userNickName' lang="zh_CN" class='name'></open-data>
     <text class='detail'>今天，又是充满活力的一天</text>
-    <view class='setting' bindtap='handleClickSet'></view>
+    <view class='setting' bindtap='handleClickSet'>
+      <image src='/images/my/setting.png'></image>
+    </view>
   </view>
   <view class='my-content my-order'>
     <view class='title'>
@@ -67,7 +69,7 @@
             </view>
             <view class='discount-user'>
               <view class='name'>{{item.name}}</view>
-              <view class='date'>有效期至：{{item.validityTime}}</view>
+              <!-- <view class='date'>有效期至：{{item.validityTime}}</view> -->
             </view>
         </view>
         <!-- <view class='dashed'></view>

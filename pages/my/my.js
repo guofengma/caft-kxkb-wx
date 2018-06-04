@@ -129,10 +129,8 @@ Page({
    */
   handleClickSet: function(){
 
-    wx.showModal({
-      title: '提示',
-      content: '功能暂未开放',
-      showCancel:false
+    wx.navigateTo({
+      url: '/pages/userInfoEdit/userInfoEdit',
     })
     return ; 
     this.setData({
@@ -140,15 +138,18 @@ Page({
     })
   },
   handleClickUpUser:function(){
-    wx.showModal({
-      title:'抱歉',
-      content:'个人信息修改暂未开放!功能将在下一版本中开放',
-      showCancel:false ,
-      success:res=>{
-        this.setData({
-          openSet:false
-        })
-      }
+    // wx.showModal({
+    //   title:'抱歉',
+    //   content:'个人信息修改暂未开放!功能将在下一版本中开放',
+    //   showCancel:false ,
+    //   success:res=>{
+    //     this.setData({
+    //       openSet:false
+    //     })
+    //   }
+    // })
+    wx.navigateTo({
+      url: '/pages/userInfoEdit/userInfoEdit',
     })
   },
   /**

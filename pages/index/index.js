@@ -27,6 +27,16 @@ Page({
     wx.getLocation({
       type: 'wgs84', //默认为 wgs84 返回 gps 坐标，gcj02 返回可用于wx.openLocation的坐标	
       success:res=>{
+        //将定位信息存放在app中
+        app.globalData.userLocationInfo = res ;
+        appUtil.request({
+          url:'all/connApi',
+          data:{
+            url: appUtil.base64Encode('https://apis.map.qq.com/ws/geocoder/v1/?location=' + res.latitude + ',' + res.longitude + '&key=JPGBZ-2IFWK-YL6J2-APKGO-6VLNK-WYFX3')
+          }
+        }).then(res=>{
+          app.globalData.userLocationInfo.city = res.result.address_component.city ;
+        })
         appUtil.requestLoading({
           url:'all/getStores',
           method:'GET',

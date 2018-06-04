@@ -9,14 +9,25 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+    phoneNumber:'',
+    userName:'',
+    plateNumber:'',
   },
   openId:'',
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.openId = wx.getStorageSync("openId")
+    this.openId = wx.getStorageSync("openId");
+    //重新获取用户信息
+    app.getUserInfoBySys((res)=>{
+      let userInfo = res ;
+      this.setData({
+        phoneNumber: userInfo.wxTelephone,
+        userName: userInfo.userName,
+        plateNumber: userInfo.plateNumber,
+      })
+    })
   },
 
   /**
@@ -70,25 +81,78 @@ Page({
   getUserInfoThen:function(e){
     console.log(e) ;
   },
+  /**
+   * 获取用户电话号码
+   */
+  getPhoneNumber:function(e){
+    let { encryptedData , iv} = e.detail ;
+    let sessionKey = app.globalData.sessionKey ; 
+    console.log(encryptedData, iv, sessionKey) ;
+    if (encryptedData==null){
+      wx.showToast({
+        title: '获取失败',
+        icon:'none'
+      })
+      return ; 
+    }
+    appUtil.request({
+      url: 'all/getUserTelephone',
+      method:'POST',
+      data:{
+        encrypted: encodeURIComponent(encryptedData),
+        "iv": encodeURIComponent(iv),
+        session_key: encodeURIComponent(sessionKey)
+      }
+    }).then(res=>{
+      console.log(res) ;
+      let { phoneNumber} = res.data ;
+      this.setData({
+        phoneNumber
+      })
+    })
+
+
+  },
   formSubmit:function(e){
     console.log(e)
     let {value:data} = e.detail ;
 
     console.log(data) ;
-    if (data.wxTelephone=="")
+    if (data.wxTelephone == ""){
+      wx.showToast({
+        title: '请留下您的手机号码',
+        icon:'none'
+      })
+    }else if (data.userName == ""){
+      wx.showToast({
+        title: '请留下您的真实姓名',
+        icon: 'none'
+      })
+    }else{
 
-    return ;
-    appUtil.requestLoading({
-      url:'me/updateUserInfo',
-      method:'POST',
-      data:{
-        openId:this.openId,
-        fwx_telephone: data.wxTelephone,
-        userName: data.userName,
-        fplate_number: data.plateNumber
-      }
-    }).then(res=>{
-      console.log(res) ;
-    })
+      appUtil.requestLoading({
+        url: 'me/updateUserInfo',
+        method: 'POST',
+        data: {
+          openId: this.openId,
+          fwx_telephone: data.wxTelephone,
+          userName: data.userName,
+          fplate_number: data.plateNumber
+        }
+      }).then(res => {
+        console.log(res);
+        if(res.data.flag==true){
+          app.getUserInfoBySys(()=>{
+            //返回上一页
+            wx.navigateBack() ;
+          })
+        }else{
+          wx.showToast({
+            title: res.errMsg,
+            icon:'none'
+          })
+        }
+      })
+    }
   }
 })

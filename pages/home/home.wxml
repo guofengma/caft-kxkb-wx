@@ -8,6 +8,9 @@
               src='{{_.imageUrl(urlLocation+shopInfo.pictureUrl)}}' 
               class='bg'>
       </image>
+      <view class='city-w'>
+        <text>{{userCity}}</text>
+      </view>
       <!-- <view class='fiter'></view> -->
       <!-- <view class='search-box-wrapper'>
          <view class='car-icon'></view>

@@ -35,6 +35,7 @@ App({
           },
         }).then(res=>{
           console.log('获取用户openid成功,存入缓存', res);
+          this.globalData.sessionKey = res.session_key ;
           wx.setStorageSync('openId', res.openid);
           console.log('缓存存入成功', wx.getStorageSync('openId'));
           this.globalData.getOpenId = true ;
@@ -94,5 +95,7 @@ App({
     shopId: '00000163-71d4-292b-c81f-5a4b2238c65a',  //门店id  后期会从附近门店获取
     //timestamp:(new Date().getTime()), //时间戳
     getOpenId:false ,
+    sessionKey:'',
+    userLocationInfo:{},
   }
 })

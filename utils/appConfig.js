@@ -11,9 +11,10 @@ module.exports = {
   onLine:"https://yekj.natappvip.cc/caft-kxkb-api/",
   loca127:'http://172.17.163.249:8280/caft-kxkb-api/',
   wxConfig:{ //微信配置
-    appSecret:'2597c0f1bbd81f4a4f3e9a254e3ac067',
-    appID:'wx928153586c2d1d04'
+    appSecret:'e0554c2a08913758a9dd767efe04d818',
+    appID:'wxd2abd43074814c62'
   },
   //adminPath:'http://172.17.163.101:8600/appFrame1/', //后端图片地址
   adminPath:'https://yekj.natappvip.cc/caft-kxkb-admin/'
 }
+// "appid": "wx928153586c2d1d04",
